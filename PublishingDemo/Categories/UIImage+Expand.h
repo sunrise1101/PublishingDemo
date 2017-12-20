@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIImage+Expand.h
 //  PublishingDemo
 //
 //  Created by 邓旭东 on 2017/12/20.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UIImage (Expand)
 
++ (UIImage *)imageWithColor:(UIColor *)color;
 
 @end
-
