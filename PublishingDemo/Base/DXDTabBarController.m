@@ -9,6 +9,7 @@
 #import "DXDTabBarController.h"
 #import "DXDTabBar.h"
 #import "PublishingViewController.h"
+#import "TestViewController.h"
 
 @interface DXDTabBarController () <DXDTabBarDelegate>
 
@@ -25,7 +26,7 @@
     [self setValue:tabbar forKeyPath:@"tabBar"];
     
     // Do any additional setup after loading the view.
-    [self wz_customTabbarVC];
+    [self customTabbarVC];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,8 +37,7 @@
 /**
  自定义tabbarController结构及UI
  */
-- (void)wz_customTabbarVC
-{
+- (void)customTabbarVC {
     //base custom
     NSArray *namesArr = @[@"OneViewController", @"TwoViewController",@"ThreeViewController", @"FourViewController"];
     NSArray *titlesArr = @[@"首页", @"用户",@"管理", @"我的"];
@@ -66,11 +66,24 @@
 #pragma mark - ------------------------------------------------------------------
 #pragma mark - DXTabBarDelegate
 //点击中间按钮的代理方法
-- (void)tabBarPlusBtnClick:(DXDTabBar *)tabBar
-{
+- (void)tabBarPlusBtnClick:(DXDTabBar *)tabBar {
     PublishingViewController *vc = [[PublishingViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+    //虚化背景
+    UIImage *image = [UIImage imageWithCaputureView:self.view];
+    vc.backImg = image;
+    @weakify(self);
+    vc.dismissVC = ^(NSInteger tag) {
+        @strongify(self);
+        [self goTestVCWithTag:tag];
+    };
+    [self presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)goTestVCWithTag:(NSInteger)tag {
+    TestViewController *vc = [[TestViewController alloc] init];
+    vc.tag = tag;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.selectedViewController pushViewController:vc animated:YES];
 }
 
 @end

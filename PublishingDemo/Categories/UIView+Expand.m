@@ -11,77 +11,67 @@
 @implementation UIView (Expand)
 
 @dynamic width,height,originX,originY;
--(CGFloat)width{
+-(CGFloat)width {
     return CGRectGetWidth(self.frame);
 }
 
--(void)setWidth:(CGFloat)width
-{
+-(void)setWidth:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
--(CGFloat)height{
+-(CGFloat)height {
     return CGRectGetHeight(self.frame);
 }
 
--(void)setHeight:(CGFloat)height
-{
+-(void)setHeight:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
 }
 
--(CGFloat)originX{
+-(CGFloat)originX {
     return CGRectGetMinX(self.frame);
 }
 
--(void)setOriginX:(CGFloat)originX
-{
+-(void)setOriginX:(CGFloat)originX {
     CGRect frame = self.frame;
     frame.origin.x = originX;
     self.frame = frame;
 }
 
--(CGFloat)originY{
+-(CGFloat)originY {
     return CGRectGetMinY(self.frame);
 }
 
--(void)setOriginY:(CGFloat)originY
-{
+-(void)setOriginY:(CGFloat)originY {
     CGRect frame = self.frame;
     frame.origin.y = originY;
     self.frame = frame;
 }
 
--(CGFloat)maxX
-{
+-(CGFloat)maxX {
     return CGRectGetMaxX(self.frame);
 }
 
--(CGFloat)maxY
-{
+-(CGFloat)maxY {
     return CGRectGetMaxY(self.frame);
 }
 
-- (CGFloat)centerX
-{
+- (CGFloat)centerX {
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX
-{
+- (void)setCenterX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
 
-- (CGFloat)centerY
-{
+- (CGFloat)centerY {
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY
-{
+- (void)setCenterY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }
 

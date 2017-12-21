@@ -13,6 +13,7 @@
 
 #define c_warmGrey              @"#999999"
 #define c_grapefruit            @"#ff5a54"
+#define c_black                 @"#3D3D3D"
 
 /**
  *    @brief    generate color

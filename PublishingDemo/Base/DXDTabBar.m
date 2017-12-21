@@ -50,7 +50,7 @@
         
         
         UILabel *label = [[UILabel alloc] init];
-        label.text = @"服务市场";
+        label.text = @"发布";
         label.font = [[UIDevice currentDevice].systemVersion floatValue] >= 11.0 ? PBSysBoldFont(10): PBSysFont(10);
         [label sizeToFit];
         label.textColor = [UIColor pb_colorWithHexString:c_warmGrey];
@@ -61,8 +61,7 @@
     return self;
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     //系统自带的按钮类型是UITabBarButton，找出这些类型的按钮，然后重新排布位置，空出中间的位置
     Class class = NSClassFromString(@"UITabBarButton");
@@ -88,8 +87,7 @@
 }
 
 //点击了发布按钮
-- (void)plusBtnDidClick
-{
+- (void)plusBtnDidClick {
     //如果tabbar的代理实现了对应的代理方法，那么就调用代理的该方法
     if ([self.delegate respondsToSelector:@selector(tabBarPlusBtnClick:)]) {
         [self.dxdDelegate tabBarPlusBtnClick:self];

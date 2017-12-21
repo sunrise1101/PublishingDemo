@@ -1,21 +1,23 @@
 //
-//  TwoViewController.m
+//  TestViewController.m
 //  PublishingDemo
 //
 //  Created by 邓旭东 on 2017/12/21.
 //  Copyright © 2017年 邓旭东. All rights reserved.
 //
 
-#import "TwoViewController.h"
+#import "TestViewController.h"
 
-@interface TwoViewController ()
+@interface TestViewController ()
 
 @end
 
-@implementation TwoViewController
+@implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor randomColor];
+    NSLog(@"to do something ... tag: %ld", self.tag);
     // Do any additional setup after loading the view.
 }
 

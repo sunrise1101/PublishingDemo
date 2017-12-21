@@ -22,6 +22,8 @@
 		90BF20B61FEB4FA100A300AC /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20B51FEB4FA100A300AC /* ThreeViewController.m */; };
 		90BF20B91FEB4FE800A300AC /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20B81FEB4FE800A300AC /* FourViewController.m */; };
 		90BF20BC1FEB502C00A300AC /* PublishingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20BB1FEB502C00A300AC /* PublishingViewController.m */; };
+		90BF20C11FEB539000A300AC /* PublishingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20C01FEB539000A300AC /* PublishingButton.m */; };
+		90BF20C41FEB624C00A300AC /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20C31FEB624C00A300AC /* TestViewController.m */; };
 		9D911EC0802DC5E07FFD0965 /* libPods-PublishingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1492DCE3F3609A22BA16B478 /* libPods-PublishingDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,10 @@
 		90BF20B81FEB4FE800A300AC /* FourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		90BF20BA1FEB502C00A300AC /* PublishingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishingViewController.h; sourceTree = "<group>"; };
 		90BF20BB1FEB502C00A300AC /* PublishingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishingViewController.m; sourceTree = "<group>"; };
+		90BF20BF1FEB539000A300AC /* PublishingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishingButton.h; sourceTree = "<group>"; };
+		90BF20C01FEB539000A300AC /* PublishingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishingButton.m; sourceTree = "<group>"; };
+		90BF20C21FEB624C00A300AC /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		90BF20C31FEB624C00A300AC /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		B1EA7B4BEB7A219894399F4D /* Pods-PublishingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublishingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PublishingDemo/Pods-PublishingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +214,15 @@
 		90BF20AD1FEB4F0000A300AC /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				90BF20BE1FEB535000A300AC /* View */,
+				90BF20BD1FEB533A00A300AC /* ViewController */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		90BF20BD1FEB533A00A300AC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				90BF20AE1FEB4F8B00A300AC /* OneViewController.h */,
 				90BF20AF1FEB4F8B00A300AC /* OneViewController.m */,
 				90BF20B11FEB4F9600A300AC /* TwoViewController.h */,
@@ -218,8 +233,19 @@
 				90BF20B81FEB4FE800A300AC /* FourViewController.m */,
 				90BF20BA1FEB502C00A300AC /* PublishingViewController.h */,
 				90BF20BB1FEB502C00A300AC /* PublishingViewController.m */,
+				90BF20C21FEB624C00A300AC /* TestViewController.h */,
+				90BF20C31FEB624C00A300AC /* TestViewController.m */,
 			);
-			path = Sections;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		90BF20BE1FEB535000A300AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90BF20BF1FEB539000A300AC /* PublishingButton.h */,
+				90BF20C01FEB539000A300AC /* PublishingButton.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		96713D9568A04D6A87305839 /* Pods */ = {
@@ -423,11 +449,13 @@
 			files = (
 				90BF20A31FEA7FAA00A300AC /* UIView+Expand.m in Sources */,
 				90BF20AB1FEA821300A300AC /* UIColor+Expand.m in Sources */,
+				90BF20C41FEB624C00A300AC /* TestViewController.m in Sources */,
 				90BF20761FEA79D500A300AC /* main.m in Sources */,
 				90BF209C1FEA7EA100A300AC /* DXDTabBarController.m in Sources */,
 				90BF209F1FEA7EC600A300AC /* DXDTabBar.m in Sources */,
 				90BF20681FEA79D500A300AC /* AppDelegate.m in Sources */,
 				90BF20B31FEB4F9600A300AC /* TwoViewController.m in Sources */,
+				90BF20C11FEB539000A300AC /* PublishingButton.m in Sources */,
 				90BF20A81FEA820600A300AC /* UIImage+Expand.m in Sources */,
 				90BF20B01FEB4F8B00A300AC /* OneViewController.m in Sources */,
 				90BF20BC1FEB502C00A300AC /* PublishingViewController.m in Sources */,

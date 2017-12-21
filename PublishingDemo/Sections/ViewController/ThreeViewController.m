@@ -1,21 +1,22 @@
 //
-//  OneViewController.m
+//  ThreeViewController.m
 //  PublishingDemo
 //
 //  Created by 邓旭东 on 2017/12/21.
 //  Copyright © 2017年 邓旭东. All rights reserved.
 //
 
-#import "OneViewController.h"
+#import "ThreeViewController.h"
 
-@interface OneViewController ()
+@interface ThreeViewController ()
 
 @end
 
-@implementation OneViewController
+@implementation ThreeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor randomColor];
     // Do any additional setup after loading the view.
 }
 

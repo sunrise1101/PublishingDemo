@@ -1,21 +1,22 @@
 //
-//  FourViewController.m
+//  OneViewController.m
 //  PublishingDemo
 //
 //  Created by 邓旭东 on 2017/12/21.
 //  Copyright © 2017年 邓旭东. All rights reserved.
 //
 
-#import "FourViewController.h"
+#import "OneViewController.h"
 
-@interface FourViewController ()
+@interface OneViewController ()
 
 @end
 
-@implementation FourViewController
+@implementation OneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor randomColor];
     // Do any additional setup after loading the view.
 }
 
