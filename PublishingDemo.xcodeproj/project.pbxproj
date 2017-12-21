@@ -17,6 +17,11 @@
 		90BF20A31FEA7FAA00A300AC /* UIView+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20A21FEA7FAA00A300AC /* UIView+Expand.m */; };
 		90BF20A81FEA820600A300AC /* UIImage+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20A71FEA820600A300AC /* UIImage+Expand.m */; };
 		90BF20AB1FEA821300A300AC /* UIColor+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20AA1FEA821300A300AC /* UIColor+Expand.m */; };
+		90BF20B01FEB4F8B00A300AC /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20AF1FEB4F8B00A300AC /* OneViewController.m */; };
+		90BF20B31FEB4F9600A300AC /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20B21FEB4F9600A300AC /* TwoViewController.m */; };
+		90BF20B61FEB4FA100A300AC /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20B51FEB4FA100A300AC /* ThreeViewController.m */; };
+		90BF20B91FEB4FE800A300AC /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20B81FEB4FE800A300AC /* FourViewController.m */; };
+		90BF20BC1FEB502C00A300AC /* PublishingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20BB1FEB502C00A300AC /* PublishingViewController.m */; };
 		9D911EC0802DC5E07FFD0965 /* libPods-PublishingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1492DCE3F3609A22BA16B478 /* libPods-PublishingDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +68,17 @@
 		90BF20A71FEA820600A300AC /* UIImage+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Expand.m"; sourceTree = "<group>"; };
 		90BF20A91FEA821300A300AC /* UIColor+Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expand.h"; sourceTree = "<group>"; };
 		90BF20AA1FEA821300A300AC /* UIColor+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expand.m"; sourceTree = "<group>"; };
+		90BF20AC1FEA842F00A300AC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		90BF20AE1FEB4F8B00A300AC /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		90BF20AF1FEB4F8B00A300AC /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		90BF20B11FEB4F9600A300AC /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		90BF20B21FEB4F9600A300AC /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		90BF20B41FEB4FA100A300AC /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		90BF20B51FEB4FA100A300AC /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		90BF20B71FEB4FE800A300AC /* FourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		90BF20B81FEB4FE800A300AC /* FourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		90BF20BA1FEB502C00A300AC /* PublishingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishingViewController.h; sourceTree = "<group>"; };
+		90BF20BB1FEB502C00A300AC /* PublishingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishingViewController.m; sourceTree = "<group>"; };
 		B1EA7B4BEB7A219894399F4D /* Pods-PublishingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublishingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PublishingDemo/Pods-PublishingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +133,7 @@
 		90BF20651FEA79D500A300AC /* PublishingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				90BF20AD1FEB4F0000A300AC /* Sections */,
 				90BF20A41FEA7FDE00A300AC /* Macro */,
 				90BF20991FEA7E6D00A300AC /* AppDelegate */,
 				90BF20A01FEA7F7A00A300AC /* Categories */,
@@ -124,6 +141,7 @@
 				90BF206F1FEA79D500A300AC /* Assets.xcassets */,
 				90BF20741FEA79D500A300AC /* Info.plist */,
 				90BF20751FEA79D500A300AC /* main.m */,
+				90BF20AC1FEA842F00A300AC /* PrefixHeader.pch */,
 			);
 			path = PublishingDemo;
 			sourceTree = "<group>";
@@ -185,6 +203,23 @@
 				90BF20A51FEA800A00A300AC /* UIMacros.h */,
 			);
 			path = Macro;
+			sourceTree = "<group>";
+		};
+		90BF20AD1FEB4F0000A300AC /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				90BF20AE1FEB4F8B00A300AC /* OneViewController.h */,
+				90BF20AF1FEB4F8B00A300AC /* OneViewController.m */,
+				90BF20B11FEB4F9600A300AC /* TwoViewController.h */,
+				90BF20B21FEB4F9600A300AC /* TwoViewController.m */,
+				90BF20B41FEB4FA100A300AC /* ThreeViewController.h */,
+				90BF20B51FEB4FA100A300AC /* ThreeViewController.m */,
+				90BF20B71FEB4FE800A300AC /* FourViewController.h */,
+				90BF20B81FEB4FE800A300AC /* FourViewController.m */,
+				90BF20BA1FEB502C00A300AC /* PublishingViewController.h */,
+				90BF20BB1FEB502C00A300AC /* PublishingViewController.m */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		96713D9568A04D6A87305839 /* Pods */ = {
@@ -392,7 +427,12 @@
 				90BF209C1FEA7EA100A300AC /* DXDTabBarController.m in Sources */,
 				90BF209F1FEA7EC600A300AC /* DXDTabBar.m in Sources */,
 				90BF20681FEA79D500A300AC /* AppDelegate.m in Sources */,
+				90BF20B31FEB4F9600A300AC /* TwoViewController.m in Sources */,
 				90BF20A81FEA820600A300AC /* UIImage+Expand.m in Sources */,
+				90BF20B01FEB4F8B00A300AC /* OneViewController.m in Sources */,
+				90BF20BC1FEB502C00A300AC /* PublishingViewController.m in Sources */,
+				90BF20B91FEB4FE800A300AC /* FourViewController.m in Sources */,
+				90BF20B61FEB4FA100A300AC /* ThreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PublishingDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PublishingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrise1101.www.PublishingDemo;
@@ -552,6 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PublishingDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PublishingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrise1101.www.PublishingDemo;

@@ -8,10 +8,6 @@
 
 #import "DXDTabBar.h"
 #import <UIKit/UIKit.h>
-#import "UIMacros.h"
-#import "UIView+Expand.h"
-#import "UIImage+Expand.h"
-#import "UIColor+Expand.h"
 
 @interface DXDTabBar ()
 
@@ -55,7 +51,7 @@
         
         UILabel *label = [[UILabel alloc] init];
         label.text = @"服务市场";
-        label.font = PBSysFont(10);
+        label.font = [[UIDevice currentDevice].systemVersion floatValue] >= 11.0 ? PBSysBoldFont(10): PBSysFont(10);
         [label sizeToFit];
         label.textColor = [UIColor pb_colorWithHexString:c_warmGrey];
         [self addSubview:label];
