@@ -91,7 +91,7 @@ dispatch_async(dispatch_get_main_queue(),block);\
 NS_ASSUME_NONNULL_BEGIN
 
 static inline NSInteger dxd_autoResize(CGFloat size) {
-    return (size*PBSCREEN_WIDTH)/414.0f;
+    return (size*PBSCREEN_WIDTH)/375.f;
 }
 
 NS_ASSUME_NONNULL_END
