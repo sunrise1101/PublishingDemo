@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90A08450200D9BCD00BDBF0C /* NSTimer+BlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A0844F200D9BCD00BDBF0C /* NSTimer+BlocksSupport.m */; };
 		90BF20681FEA79D500A300AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20671FEA79D500A300AC /* AppDelegate.m */; };
 		90BF20701FEA79D500A300AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BF206F1FEA79D500A300AC /* Assets.xcassets */; };
 		90BF20761FEA79D500A300AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BF20751FEA79D500A300AC /* main.m */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		1492DCE3F3609A22BA16B478 /* libPods-PublishingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PublishingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		723BAFE19DB84FE329BC92B1 /* Pods-PublishingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublishingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PublishingDemo/Pods-PublishingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		90A0844E200D9BCD00BDBF0C /* NSTimer+BlocksSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BlocksSupport.h"; sourceTree = "<group>"; };
+		90A0844F200D9BCD00BDBF0C /* NSTimer+BlocksSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BlocksSupport.m"; sourceTree = "<group>"; };
 		90BF20631FEA79D500A300AC /* PublishingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublishingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BF20661FEA79D500A300AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90BF20671FEA79D500A300AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				90BF20A71FEA820600A300AC /* UIImage+Expand.m */,
 				90BF20A91FEA821300A300AC /* UIColor+Expand.h */,
 				90BF20AA1FEA821300A300AC /* UIColor+Expand.m */,
+				90A0844E200D9BCD00BDBF0C /* NSTimer+BlocksSupport.h */,
+				90A0844F200D9BCD00BDBF0C /* NSTimer+BlocksSupport.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				90BF20C41FEB624C00A300AC /* TestViewController.m in Sources */,
 				90BF20761FEA79D500A300AC /* main.m in Sources */,
 				90BF209C1FEA7EA100A300AC /* DXDTabBarController.m in Sources */,
+				90A08450200D9BCD00BDBF0C /* NSTimer+BlocksSupport.m in Sources */,
 				90BF209F1FEA7EC600A300AC /* DXDTabBar.m in Sources */,
 				90BF20681FEA79D500A300AC /* AppDelegate.m in Sources */,
 				90BF20B31FEB4F9600A300AC /* TwoViewController.m in Sources */,

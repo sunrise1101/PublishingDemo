@@ -13,5 +13,6 @@
 #import "UIView+Expand.h"
 #import "UIImage+Expand.h"
 #import "UIColor+Expand.h"
+#import "NSTimer+BlocksSupport.h"
 
 #endif /* PrefixHeader_h */

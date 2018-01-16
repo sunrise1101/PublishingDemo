@@ -11,8 +11,6 @@
 
 @interface PublishingViewController ()
 
-@property (nonatomic, strong) NSTimer *startTimer;
-@property (nonatomic, strong) NSTimer *endTimer;
 @property (nonatomic, strong) NSMutableArray *buttonsMArray;
 @property (nonatomic, assign) NSUInteger upIndex;
 @property (nonatomic, assign) NSUInteger downIndex;
@@ -21,14 +19,17 @@
 
 @end
 
-@implementation PublishingViewController
+@implementation PublishingViewController {
+    NSTimer *_startTimer;
+    NSTimer *_endTimer;
+}
 
 - (void)dealloc {
-    [self.startTimer invalidate];
-    [self.endTimer invalidate];
+    [_startTimer invalidate];
+    [_endTimer invalidate];
     
-    self.startTimer = nil;
-    self.endTimer = nil;
+    _startTimer = nil;
+    _endTimer = nil;
 }
 
 #pragma mark - ------------------------------------------------------------------
@@ -46,20 +47,6 @@
         _imageArray = @[@"ic_independent_service",@"ic_cooperative_service"];
     }
     return _imageArray;
-}
-
-- (NSTimer *)startTimer {
-    if (!_startTimer) {
-        _startTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(popupBtn) userInfo:nil repeats:YES];
-    }
-    return _startTimer;
-}
-
-- (NSTimer *)endTimer {
-    if (!_endTimer) {
-        _endTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(returnUpVC) userInfo:nil repeats:YES];
-    }
-    return _endTimer;
 }
 
 //重新初始化主视图样式 透明->
@@ -84,7 +71,14 @@
     //添加底部关闭按钮
     [self insertCloseImg];
     //定时器控制每个按钮弹出的时间
-    [[NSRunLoop currentRunLoop] addTimer:self.startTimer forMode:NSRunLoopCommonModes];
+    //在这里，创建了一个self的弱引用，然后让块捕获了这个self变量，让其在执行期间存活。
+    __weak typeof(self)weakSelf = self;
+    _startTimer = [NSTimer dxd_scheduledTimerWithTimeInterval:0.1 block:^{
+        //一旦外界指向该类的最后一个引用消失，该类就会被释放，被释放的同时，也会向NSTimer发送invalidate消息（因为在该类的dealloc方法中向NSTimer发送了invalidate消息）。
+        //而且，即使在dealloc方法里没有发送invalidate消息，因为块里的weakSelf会变成nil，所以NSTimer同样会失效。
+        [weakSelf popupBtn];
+    } repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_startTimer forMode:NSRunLoopCommonModes];
     //添加手势点击事件
     @weakify(self);
     //防止重复点击
@@ -113,7 +107,7 @@
 
 - (void)popupBtn{
     if (_upIndex == self.buttonsMArray.count) {
-        [self.startTimer invalidate];
+        [_startTimer invalidate];
         _upIndex = 0;
         return;
     }
@@ -196,7 +190,7 @@
 //设置按钮从后往前下落
 - (void)returnUpVC {
     if (_downIndex == -1) {
-        [self.endTimer invalidate];
+        [_endTimer invalidate];
         return;
     }
     PublishingButton *btn = self.buttonsMArray[_downIndex];
@@ -216,7 +210,11 @@
 
 //点击事件返回上一控制器,并且旋转145弧度关闭按钮
 -(void)touchesBegan:(UITapGestureRecognizer *)touches{
-    [[NSRunLoop currentRunLoop] addTimer:self.endTimer forMode:NSRunLoopCommonModes];
+    __weak typeof(self)weakSelf = self;
+    _endTimer = [NSTimer dxd_scheduledTimerWithTimeInterval:0.1 block:^{
+        [weakSelf returnUpVC];
+    } repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_endTimer forMode:NSRunLoopCommonModes];
     [UIView animateWithDuration:0.3 animations:^{
         self->_closeImgView.transform = CGAffineTransformRotate(self->_closeImgView.transform, -M_PI_2 * 1.5);
     }];
